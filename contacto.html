@@ -6081,35 +6081,43 @@
 							</div>
 							<div class="span6">
 								<div class="form pull-left full-width">
-									<form class="contact_form" action="/winnie-pooh" method="post" onsubmit="this.setAttribute('action', '');" data-store="contact-form">
-										<input type="hidden" value="" name="product">
-										<input type="hidden" name="type" value="contact">
-										<div class="form-group">
-											<label for="name" class="form-label">Nombre</label>
-											<input type="text" id="name" name="name" class="form-control"> </div>
-										<div class="form-group">
-											<label for="email" class="form-label">Correo electrónico</label>
-											<input type="email" id="email" name="email" class="form-control"> </div>
-										<div class="field winnie-pooh hidden">
-											<label for="winnie-pooh">No completar este campo</label>
-											<input id="winnie-pooh" type="text" name="winnie-pooh"> </div>
-										<div class="form-group">
-											<label for="phone" class="form-label"> Teléfono <small class="m-left-quarter">(Opcional)</small> </label>
-											<input type="text" id="phone" name="phone" class="form-control"> </div>
-										<div class="form-group">
-											<label for="message" class="form-label"> Mensaje <small class="m-left-quarter">(Opcional)</small> </label>
-											<textarea id="message" name="message" cols="20" rows="5" class="full-width border-box m-none"></textarea>
-										</div>
-										<div class="g-recaptcha">
-											<div style="width: 304px; height: 78px;">
-												<div>
-													<iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-2kpeqp2hft3" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Ldp6lUqAAAAAEmZBhIVl_tzMi70KlSohR77QfLc&amp;co=aHR0cHM6Ly9tYXRlcmlhbGFiLm1pdGllbmRhbnViZS5jb206NDQz&amp;hl=en&amp;v=AWtrSI7lAmTAfV1rzWqEqz54&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=hiqsm78ouisb"></iframe>
-												</div>
-												<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-											</div>
-											<iframe style="display: none;"></iframe>
-										</div>
-										<input type="submit" class="btn btn-primary contact pull-right span5 m-bottom" value="Enviar" name="contact" disabled=""> </form>
+						  <div class="form-container">
+    <h2>Subscribe to Our Newsletter</h2>
+    <!-- Google Form for newsletter signup -->
+<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfoZij59mUeyCrBwTXcTs7N0MCWoEB1UeSjnEDjUmBWzyfsDw/formResponse" method="POST" target="_self">
+  <!-- Name -->
+  <label for="name">Full Name:</label><br>
+  <input type="text" id="name" name="entry.1125521261" required=""><br><br>
+  
+  <!-- Email -->
+  <label for="email">Email Address:</label><br>
+  <input type="email" id="email" name="entry.1291635818" required=""><br><br>
+  
+  <!-- Message or additional info -->
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="entry.2088578609" rows="4" cols="50"></textarea><br><br>
+  
+  <button type="submit">Register</button>
+</form>
+    <div class="success-message" id="successMessage">Thank you for subscribing!</div>
+  </div>
+  <a href="https://placosostudio.com/shop.html"><button>shop</button></a>
+  <script>
+    // Optional: Show success message after submission
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission to handle via AJAX if needed
+
+      // You can implement AJAX here for better UX
+      // For now, just submit the form normally
+      this.submit();
+
+      // Show success message
+      document.getElementById('successMessage').style.display = 'block';
+
+      // Optional: reset form
+      this.reset();
+    });
+  </script>
 								</div>
 							</div>
 						</div>
